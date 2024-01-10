@@ -73,6 +73,8 @@ pipeline {
                         '''
                     }
                     else if (env.BRANCH_NAME == 'main'){
+                    sh "echo 'WORKING IN MAIN ENVIROMENT'"    
+                        
                     sh '''
                         eval "$(ssh-agent -s)"
                         ssh-add ~/.ssh/id_rsa
